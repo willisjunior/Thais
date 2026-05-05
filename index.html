@@ -1390,7 +1390,7 @@
       .hero-grid {
         position: relative;
         display: grid;
-        min-height: 760px;
+        min-height: clamp(690px, 180vw, 780px);
         overflow: hidden;
         background: var(--paper);
       }
@@ -1405,9 +1405,10 @@
       .hero-content {
         z-index: 4;
         align-self: end;
-        padding: 220px 16px 26px;
+        padding: clamp(260px, 70vw, 370px) 16px 28px;
         background:
-          linear-gradient(180deg, rgba(253, 248, 240, 0) 0%, rgba(253, 248, 240, 0.24) 42%, rgba(253, 248, 240, 0.92) 66%, rgba(253, 248, 240, 1) 100%);
+          linear-gradient(180deg, rgba(253, 248, 240, 0) 0%, rgba(253, 248, 240, 0.32) 38%, rgba(253, 248, 240, 0.94) 61%, rgba(253, 248, 240, 1) 100%);
+        transform: translateY(-34px);
       }
 
       .hero h1 {
@@ -1432,6 +1433,10 @@
         width: 100%;
       }
 
+      .hero-actions .btn-soft {
+        display: none;
+      }
+
       .hero-trust,
       .stats-grid,
       .audience-grid {
@@ -1444,7 +1449,7 @@
 
       .hero-visual {
         z-index: 1;
-        min-height: 760px;
+        min-height: clamp(690px, 180vw, 780px);
       }
 
       .portrait-panel {
@@ -1458,19 +1463,19 @@
 
       .portrait-panel::before {
         background:
-          linear-gradient(180deg, rgba(253, 248, 240, 0) 0%, rgba(253, 248, 240, 0) 42%, rgba(253, 248, 240, 0.76) 67%, rgba(253, 248, 240, 1) 100%),
-          linear-gradient(90deg, rgba(253, 248, 240, 0.58) 0%, rgba(253, 248, 240, 0.16) 45%, rgba(253, 248, 240, 0) 100%);
+          linear-gradient(180deg, rgba(253, 248, 240, 0) 0%, rgba(253, 248, 240, 0.04) 42%, rgba(253, 248, 240, 0.74) 68%, rgba(253, 248, 240, 1) 100%);
       }
 
       .hero-team-photo {
+        top: 10px;
         left: 50%;
         right: auto;
-        bottom: 0;
-        width: auto;
+        bottom: auto;
+        width: min(130%, 780px);
         max-width: none;
-        height: 100%;
+        height: auto;
         min-height: 0;
-        transform: translateX(-67%);
+        transform: translateX(-60%);
       }
 
       .hero-logo-chip {
@@ -1540,7 +1545,7 @@
       }
 
       .hero-visual {
-        min-height: 740px;
+        min-height: 700px;
       }
 
       .service-card,
